@@ -60,3 +60,11 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem "camaleon_cms",  '>= 2.4.5' # (Current stable versions are 2.4.4.5, 2.4.3.10, 2.3.6, 2.2.1, 2.1.1)
+gem 'draper', '~> 3' # for Rails 5+
+
+
+#################### Camaleon CMS include all gems for plugins and themes #################### 
+require './lib/plugin_routes' 
+instance_eval(PluginRoutes.draw_gems)
